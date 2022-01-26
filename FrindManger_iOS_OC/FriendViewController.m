@@ -6,6 +6,7 @@
 //
 
 #import "FriendViewController.h"
+#import "SelectLocationViewController.h"
 
 @interface FriendViewController ()
 {
@@ -19,6 +20,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *PhoneTextEdit;
 @property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 @property (weak, nonatomic) IBOutlet UIImageView *frindPictureEdit;
+@property (weak, nonatomic) IBOutlet UITextField *age;
+@property (weak, nonatomic) IBOutlet UITextField *email;
+@property (weak, nonatomic) IBOutlet UITextField *longit;
+@property (weak, nonatomic) IBOutlet UITextField *latit;
 
 @end
 
@@ -35,10 +40,16 @@
     }else{
         [_deleteButton setHidden:YES];
     }
-   
+    
+}
+- (IBAction)setLocationClicked:(id)sender {
+    SelectLocationViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"SelectLocationView"];
+    view.frindView = self;
+    [self.navigationController pushViewController:view animated:YES];
+    
 }
 - (IBAction)SaveClicked:(UIButton *)sender {
-   
+    
     if(_state == Adding){
         Friend *friend = [Friend new ];
         [self LoadDataIntoFriend:friend];
@@ -52,7 +63,7 @@
     }
     
     [self.tableView refreshDataSource];
-    
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 - (IBAction)deleteClicked:(id)sender {
     
@@ -65,7 +76,7 @@
     imagePicker.delegate = self;
     imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
     [self presentViewController:imagePicker animated:YES completion:nil];
- 
+    
 }
 -(void) imagePickerController:(UIImagePickerController *) picker didFinishPickingMediaWithInfo:(NSDictionary *) info {
     image = [info  objectForKey:UIImagePickerControllerOriginalImage];
@@ -77,6 +88,10 @@
     friend.Address = _AddressTextEdit.text;
     friend.PhoneNumber = _PhoneTextEdit.text;
     friend.Picture =   _frindPictureEdit.image ;
+    friend.age     =      _age.text;
+    friend.email =_email.text;
+    friend.longitude= [_longit.text doubleValue];
+    friend.latitude = [_latit.text doubleValue];
     
 }
 -(void)LoadDataFromFriend:(Friend*)friend{
@@ -84,16 +99,25 @@
     _AddressTextEdit.text =    friend.Address ;
     _PhoneTextEdit.text =   friend.PhoneNumber ;
     _frindPictureEdit.image = friend.Picture;
+    _age.text = friend.age;
+    _email.text = friend.email;
+    _longit.text = [[NSNumber numberWithDouble:friend.longitude] stringValue ];
+    _latit.text = [[NSNumber numberWithDouble:friend.latitude] stringValue ];
 }
 
 /*
-#pragma mark - Navigation
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setLocation:(CLLocationCoordinate2D)point {
+    _longit.text = [[NSNumber numberWithDouble:point.longitude ] stringValue];
+    _latit.text = [[NSNumber numberWithDouble:point.latitude ] stringValue];
 }
-*/
 
 @end

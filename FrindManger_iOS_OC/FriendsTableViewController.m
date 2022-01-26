@@ -6,8 +6,9 @@
 //
 
 #import "FriendsTableViewController.h"
-#import "Models/Friend.h";
+#import "Models/Friend.h"
 #import "FriendViewController.h"
+#import "ViewFriendViewController.h"
 
 @interface FriendsTableViewController ()
 {
@@ -71,22 +72,22 @@
 }
 -(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
   
-//    FriendViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"friendView"];
-//    view.state = Editing;
-//    view.tableView = self;
-//    view.friends = frinds;
-//    view.currentFrindIndex = indexPath.row ;
-//    [self.navigationController pushViewController:view animated:YES];
-//
-    
-    [self openFriend:indexPath.row];
+    [self editFriend:indexPath.row];
 }
--(void) openFriend:(int)index{
+-(void) editFriend:(int)index{
     FriendViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"friendView"];
     view.state = Editing;
     view.tableView = self;
     view.friends = frinds;
     view.currentFrindIndex = index;
+    [self.navigationController pushViewController:view animated:YES];
+}
+
+-(void) viewFriend:(int)index{
+    ViewFriendViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"ViewFriendView"];
+     
+    [view setFriend:[frinds objectAtIndex:index]] ;
+  
     [self.navigationController pushViewController:view animated:YES];
 }
 /*
@@ -137,7 +138,7 @@
 */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    [self openFriend:indexPath.row];
+    [self viewFriend:indexPath.row];
 }
 
 @end

@@ -18,6 +18,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property UIImage* Picture;
 @property NSString* Address;
 @property NSString* PhoneNumber;
+@property NSString* age;
+@property NSString* email;
+@property double longitude;
+@property double latitude;
 @property NSDate* DOB;
 
 @end

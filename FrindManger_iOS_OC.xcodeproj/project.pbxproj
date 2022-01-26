@@ -16,6 +16,10 @@
 		3253DD1C2796DA5B009BE8C5 /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 3253DD1B2796DA5B009BE8C5 /* Friend.m */; };
 		3253DD1F2796DBC8009BE8C5 /* FriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3253DD1E2796DBC8009BE8C5 /* FriendsTableViewController.m */; };
 		3253DD222796DBF0009BE8C5 /* FriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3253DD212796DBF0009BE8C5 /* FriendViewController.m */; };
+		32F280BA27A165ED00495295 /* SelectLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F280B927A165ED00495295 /* SelectLocationViewController.m */; };
+		32F280BE27A167C500495295 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F280BD27A167C500495295 /* MapKit.framework */; };
+		32F280C127A16CBC00495295 /* CutomMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F280C027A16CBC00495295 /* CutomMapAnnotation.m */; };
+		32F280C427A179E800495295 /* ViewFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F280C327A179E800495295 /* ViewFriendViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,14 @@
 		3253DD202796DBF0009BE8C5 /* FriendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendViewController.h; sourceTree = "<group>"; };
 		3253DD212796DBF0009BE8C5 /* FriendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendViewController.m; sourceTree = "<group>"; };
 		3253DD232796E21D009BE8C5 /* TableViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewProtocol.h; sourceTree = "<group>"; };
+		32F280B827A165ED00495295 /* SelectLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectLocationViewController.h; sourceTree = "<group>"; };
+		32F280B927A165ED00495295 /* SelectLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectLocationViewController.m; sourceTree = "<group>"; };
+		32F280BB27A1675E00495295 /* FrindViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrindViewProtocol.h; sourceTree = "<group>"; };
+		32F280BD27A167C500495295 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		32F280BF27A16CBC00495295 /* CutomMapAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CutomMapAnnotation.h; sourceTree = "<group>"; };
+		32F280C027A16CBC00495295 /* CutomMapAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CutomMapAnnotation.m; sourceTree = "<group>"; };
+		32F280C227A179E800495295 /* ViewFriendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewFriendViewController.h; sourceTree = "<group>"; };
+		32F280C327A179E800495295 /* ViewFriendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewFriendViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32F280BE27A167C500495295 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +67,7 @@
 			children = (
 				3253DCFF2796DA24009BE8C5 /* FrindManger_iOS_OC */,
 				3253DCFE2796DA24009BE8C5 /* Products */,
+				32F280BC27A167C400495295 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +97,13 @@
 				3253DD122796DA2A009BE8C5 /* main.m */,
 				3253DD202796DBF0009BE8C5 /* FriendViewController.h */,
 				3253DD212796DBF0009BE8C5 /* FriendViewController.m */,
+				32F280B827A165ED00495295 /* SelectLocationViewController.h */,
+				32F280B927A165ED00495295 /* SelectLocationViewController.m */,
+				32F280BB27A1675E00495295 /* FrindViewProtocol.h */,
+				32F280BF27A16CBC00495295 /* CutomMapAnnotation.h */,
+				32F280C027A16CBC00495295 /* CutomMapAnnotation.m */,
+				32F280C227A179E800495295 /* ViewFriendViewController.h */,
+				32F280C327A179E800495295 /* ViewFriendViewController.m */,
 			);
 			path = FrindManger_iOS_OC;
 			sourceTree = "<group>";
@@ -94,6 +115,14 @@
 				3253DD1B2796DA5B009BE8C5 /* Friend.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		32F280BC27A167C400495295 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32F280BD27A167C500495295 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,11 +195,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32F280C127A16CBC00495295 /* CutomMapAnnotation.m in Sources */,
 				3253DD1C2796DA5B009BE8C5 /* Friend.m in Sources */,
+				32F280C427A179E800495295 /* ViewFriendViewController.m in Sources */,
 				3253DD022796DA24009BE8C5 /* AppDelegate.m in Sources */,
 				3253DD1F2796DBC8009BE8C5 /* FriendsTableViewController.m in Sources */,
 				3253DD132796DA2A009BE8C5 /* main.m in Sources */,
 				3253DD222796DBF0009BE8C5 /* FriendViewController.m in Sources */,
+				32F280BA27A165ED00495295 /* SelectLocationViewController.m in Sources */,
 				3253DD052796DA24009BE8C5 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
