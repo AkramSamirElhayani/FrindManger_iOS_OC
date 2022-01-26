@@ -9,7 +9,7 @@
 #import "Models/Friend.h"
 #import "FriendViewController.h"
 #import "ViewFriendViewController.h"
-
+#import "ViewAllInMapViewController.h"
 @interface FriendsTableViewController ()
 {
     NSMutableArray<Friend*> *frinds ;
@@ -139,6 +139,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [self viewFriend:indexPath.row];
+}
+- (IBAction)viewAllInMap:(id)sender {
+    
+    ViewAllInMapViewController *view = [self.storyboard instantiateViewControllerWithIdentifier:@"viewInMapView"];
+ 
+    view.friends = frinds;
+    [self.navigationController pushViewController:view animated:YES];
+    
 }
 
 @end

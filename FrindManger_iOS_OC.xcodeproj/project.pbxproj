@@ -20,6 +20,7 @@
 		32F280BE27A167C500495295 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F280BD27A167C500495295 /* MapKit.framework */; };
 		32F280C127A16CBC00495295 /* CutomMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F280C027A16CBC00495295 /* CutomMapAnnotation.m */; };
 		32F280C427A179E800495295 /* ViewFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F280C327A179E800495295 /* ViewFriendViewController.m */; };
+		32F280C727A1844B00495295 /* ViewAllInMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32F280C627A1844B00495295 /* ViewAllInMapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,8 @@
 		32F280C027A16CBC00495295 /* CutomMapAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CutomMapAnnotation.m; sourceTree = "<group>"; };
 		32F280C227A179E800495295 /* ViewFriendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewFriendViewController.h; sourceTree = "<group>"; };
 		32F280C327A179E800495295 /* ViewFriendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewFriendViewController.m; sourceTree = "<group>"; };
+		32F280C527A1844B00495295 /* ViewAllInMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewAllInMapViewController.h; sourceTree = "<group>"; };
+		32F280C627A1844B00495295 /* ViewAllInMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewAllInMapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 				32F280C027A16CBC00495295 /* CutomMapAnnotation.m */,
 				32F280C227A179E800495295 /* ViewFriendViewController.h */,
 				32F280C327A179E800495295 /* ViewFriendViewController.m */,
+				32F280C527A1844B00495295 /* ViewAllInMapViewController.h */,
+				32F280C627A1844B00495295 /* ViewAllInMapViewController.m */,
 			);
 			path = FrindManger_iOS_OC;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 				32F280C427A179E800495295 /* ViewFriendViewController.m in Sources */,
 				3253DD022796DA24009BE8C5 /* AppDelegate.m in Sources */,
 				3253DD1F2796DBC8009BE8C5 /* FriendsTableViewController.m in Sources */,
+				32F280C727A1844B00495295 /* ViewAllInMapViewController.m in Sources */,
 				3253DD132796DA2A009BE8C5 /* main.m in Sources */,
 				3253DD222796DBF0009BE8C5 /* FriendViewController.m in Sources */,
 				32F280BA27A165ED00495295 /* SelectLocationViewController.m in Sources */,
